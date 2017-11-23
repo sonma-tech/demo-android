@@ -165,7 +165,7 @@ public class SDK {
 
 
             if (sign) {
-                Long timestamp = 1511442325L;//TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
+                Long timestamp = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
                 String authorization = createAuthorization(timestamp, queryString);
                 conn.setRequestProperty(API.HEADER.AUTHORIZATION, authorization);
                 conn.setRequestProperty(API.HEADER.TIMESTAMP, timestamp.toString());
